@@ -6,7 +6,7 @@ I will post here some smaller or larger projects realized at the university.
 
 ---
 ______________________________________________________________
-#### ARKANOID
+                                   #### ARKANOID
 ______________________________________________________________                  
             
 This project is a remake of a well-known arcade game from 1986 called "Arkanoid".
