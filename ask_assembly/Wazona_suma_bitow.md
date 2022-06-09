@@ -16,7 +16,9 @@
  *pomnożenie wyniku przez 2 oraz dodanie wcześniej obliczonej sumy dla par bitów. Reszta działań wykonywana jest analogicznie, co ostatecznie daje nam sumę ważoną dla n bitów
  */
 
+
 wbs:
+
         movq            %rdi, %rdx
         and             mask1, %rdx
         popcnt          %rdx, %rax
