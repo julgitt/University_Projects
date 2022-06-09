@@ -11,7 +11,8 @@
         .type wbs, @function
 
 /*
- * W moim rozwiązaniu używam następującej techniki: Obliczam sumę ważoną na parach bitów (gdzie wagi wynoszą 0 i 1), przez andowanie z maską 101010... i popcnt
+ * W moim rozwiązaniu używam następującej techniki: 
+ * Obliczam sumę ważoną na parach bitów (gdzie wagi wynoszą 0 i 1), przez andowanie z maską 101010... i popcnt
  *następnie dla czwórek bitów (gdzie wagi to 3, 2, 1, 0), przez andowanie liczby z maska 11001100.., 
  *pomnożenie wyniku przez 2 oraz dodanie wcześniej obliczonej sumy dla par bitów. Reszta działań wykonywana jest analogicznie, co ostatecznie daje nam sumę ważoną dla n bitów
  */
