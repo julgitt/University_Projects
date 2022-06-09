@@ -17,42 +17,42 @@
  */
 
 
-wbs:
+        wbs:
 
-        movq            %rdi, %rdx
-        and             mask1, %rdx
-        popcnt          %rdx, %rax
-        
-        movq            %rdi, %rdx
-        and             mask2, %rdx
-        popcnt          %rdx, %rcx
-        shlq            $1, %rcx
-        add             %rcx, %rax
-        
-        movq            %rdi, %rdx
-        and             mask3, %rdx
-        popcnt          %rdx, %rcx
-        shlq            $2, %rcx
-        add             %rcx, %rax
-        
-        movq            %rdi, %rdx
-        and             mask4, %rdx
-        popcnt          %rdx, %rcx
-        shlq            $3, %rcx
-        add             %rcx, %rax
-        
-        movq            %rdi, %rdx
-        and             mask5, %rdx
-        popcnt          %rdx, %rcx
-        shlq            $4, %rcx
-        add             %rcx, %rax
-        
-        movq            %rdi, %rdx
-        and             mask6, %rdx
-        popcnt          %rdx, %rcx
-        shlq            $5, %rcx
-        add             %rcx, %rax
-        
-        ret
+                movq            %rdi, %rdx
+                and             mask1, %rdx
+                popcnt          %rdx, %rax
 
-        .size wbs, .-wbs
+                movq            %rdi, %rdx
+                and             mask2, %rdx
+                popcnt          %rdx, %rcx
+                shlq            $1, %rcx
+                add             %rcx, %rax
+
+                movq            %rdi, %rdx
+                and             mask3, %rdx
+                popcnt          %rdx, %rcx
+                shlq            $2, %rcx
+                add             %rcx, %rax
+
+                movq            %rdi, %rdx
+                and             mask4, %rdx
+                popcnt          %rdx, %rcx
+                shlq            $3, %rcx
+                add             %rcx, %rax
+
+                movq            %rdi, %rdx
+                and             mask5, %rdx
+                popcnt          %rdx, %rcx
+                shlq            $4, %rcx
+                add             %rcx, %rax
+
+                movq            %rdi, %rdx
+                and             mask6, %rdx
+                popcnt          %rdx, %rcx
+                shlq            $5, %rcx
+                add             %rcx, %rax
+
+                ret
+
+                .size wbs, .-wbs
