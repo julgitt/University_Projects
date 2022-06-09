@@ -1,1 +1,1 @@
-some of the programs created on the Computer System Architecture labs written in assembly.
+Some of the programs created on the Computer System Architecture's labs written in assembly.
