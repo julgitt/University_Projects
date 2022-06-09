@@ -9,16 +9,16 @@ public class Book implements Serializable {
     private final Author author;
     private final String title;
     private Boolean status; //is Borrowed?
-    private final double prize;
+    private final double price;
 
 
     //constructor
-    public Book(Author author, String title, double prize) {
+    public Book(Author author, String title, double price) {
         this.bookID = bookID_counter;
         bookID_counter++;
         this.author = author;
         this.title = title;
-        this.prize = prize;
+        this.price = price;
         this.status = false;
     }
 
@@ -39,8 +39,8 @@ public class Book implements Serializable {
         return this.status;
     }
 
-    public double getPrize() {
-        return this.prize;
+    public double getPrice() {
+        return this.price;
     }
 
     //setters
@@ -57,7 +57,7 @@ public class Book implements Serializable {
 
     @Override
     public String toString() {
-        return getTitle() + " " + getBookID() + " " + getAuthor() + " " + getPrize() + " " + getStatus() + " " + bookID_counter;
+        return getTitle() + " " + getBookID() + " " + getAuthor() + " " + getPrice() + " " + getStatus() + " " + bookID_counter;
     }
 
 }

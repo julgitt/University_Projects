@@ -54,11 +54,11 @@ public class Manager implements Serializable {
     }
 
     //______________________________________________BOOKS___________________________________________________
-    public void addBook(String title, double prize, String name, String secondName) {
+    public void addBook(String title, double price, String name, String secondName) {
 
         for (Author author : authors) {
             if (Objects.equals(author.getName(), name) && Objects.equals(author.getSecondName(), secondName)) {
-                Book newBook = new Book(author, title, prize);
+                Book newBook = new Book(author, title, price);
                 author.addBook(newBook);
                 books.add(newBook);
                 return;
@@ -66,7 +66,7 @@ public class Manager implements Serializable {
         }
 
         Author newAuthor = new Author(name, secondName);
-        Book newBook = new Book(newAuthor, title, prize);
+        Book newBook = new Book(newAuthor, title, price);
         newAuthor.addBook(newBook);
 
         authors.add(newAuthor);
@@ -164,7 +164,7 @@ public class Manager implements Serializable {
     public void DeadlineChecker() {
         for (Borrow borrow : borrows) {
             if ( borrow.getReturnDeadline().isBefore(ChronoLocalDate.from(LocalDateTime.now())) && !borrow.getStatus()) {
-                bills.add(new Bill(borrow, borrow.getReturnDeadline(), borrow.getBook().getPrize()));
+                bills.add(new Bill(borrow, borrow.getReturnDeadline(), borrow.getBook().getPrice()));
                 borrow.changeStatus();
             }
         }

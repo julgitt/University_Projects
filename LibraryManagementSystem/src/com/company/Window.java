@@ -30,7 +30,7 @@ public class Window {
     private JTextField authorNameTextField;
     private JTextField authorSecondNameTextField;
     private JTextField titleTextField;
-    private JTextField prizeTextField;
+    private JTextField priceTextField;
     private JPanel booksTable;
     private JPanel bookNewLabel;
     private JPanel bookButtons;
@@ -171,12 +171,12 @@ public class Window {
         bookAddButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (Objects.equals(titleTextField.getText(), "") || Objects.equals(prizeTextField.getText(), "")
+                if (Objects.equals(titleTextField.getText(), "") || Objects.equals(priceTextField.getText(), "")
                         || Objects.equals(authorNameTextField.getText(), "") || Objects.equals(authorSecondNameTextField.getText(), ""))
                     errors.setText("You shouldn't left blank labels");
                 else {
                     errors.setText("");
-                    manager.addBook(titleTextField.getText(), Double.parseDouble(prizeTextField.getText()), authorNameTextField.getText(), authorSecondNameTextField.getText());
+                    manager.addBook(titleTextField.getText(), Double.parseDouble(priceTextField.getText()), authorNameTextField.getText(), authorSecondNameTextField.getText());
                     CreateBooksTable();
                     CreateAuthorsTable();
                 }
@@ -313,10 +313,10 @@ public class Window {
             data[i][0] = manager.getBooks().get(i).getBookID();
             data[i][1] = manager.getBooks().get(i).getTitle();
             data[i][2] = manager.getBooks().get(i).getAuthor().getName() + " " + manager.getBooks().get(i).getAuthor().getSecondName();
-            data[i][3] = manager.getBooks().get(i).getPrize();
+            data[i][3] = manager.getBooks().get(i).getPrice();
             data[i][4] = (manager.getBooks().get(i).getStatus()) ? "borrowed" : "not borrowed";
         }
-        books.setModel(new DefaultTableModel(data, new String[]{"Id", "Title", "Author", "Prize", "Status"}));
+        books.setModel(new DefaultTableModel(data, new String[]{"Id", "Title", "Author", "price", "Status"}));
 
 
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
@@ -374,9 +374,9 @@ public class Window {
             data[i][1] = manager.getBills().get(i).getBorrow().getUserID();
             data[i][2] = manager.getBills().get(i).getBorrow().getUser().getName() + " " + manager.getBills().get(i).getBorrow().getUser().getSecondName();
             data[i][3] = manager.getBills().get(i).getBorrow().getReturnDeadline();
-            data[i][4] =  String.format("%.2f",(manager.getBills().get(i).getPrize()));
+            data[i][4] =  String.format("%.2f",(manager.getBills().get(i).getPrice()));
         }
-        bills.setModel(new DefaultTableModel(data, new String[]{"ID", "UserID", "Username", "Return Deadline", "Prize"}));
+        bills.setModel(new DefaultTableModel(data, new String[]{"ID", "UserID", "Username", "Return Deadline", "price"}));
 
 
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);

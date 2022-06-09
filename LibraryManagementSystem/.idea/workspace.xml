@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5adb80c8-7ac6-42bf-bbe3-853d19d13456" name="Changes" comment="" />
+    <list default="true" id="5adb80c8-7ac6-42bf-bbe3-853d19d13456" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save.ser" beforeDir="false" afterPath="$PROJECT_DIR$/save.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Window.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Window.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Window.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +24,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -32,6 +43,7 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2A7ns2YLOcQHamP7p2CbZcT0AY9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
@@ -92,6 +104,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="2" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="285" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>

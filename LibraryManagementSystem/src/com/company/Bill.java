@@ -6,17 +6,17 @@ import java.time.LocalDate;
 public class Bill implements Serializable {
     private final int billID;
     static int billID_counter;
-    private final double prizeForDay;
+    private final double priceForDay;
     private final LocalDate returnDeadline;
     private final Borrow borrow;
 
     //constructor
-    public Bill(Borrow borrow, LocalDate returnDeadline, double prize) {
+    public Bill(Borrow borrow, LocalDate returnDeadline, double price) {
         this.billID = billID_counter;
         billID_counter++;
         this.borrow = borrow;
         this.returnDeadline = returnDeadline;
-        this.prizeForDay = prize * 0.1;
+        this.priceForDay = price * 0.1;
     }
 
     //getters
@@ -24,8 +24,8 @@ public class Bill implements Serializable {
         return this.billID;
     }
 
-    public double getPrize() {
-        return this.prizeForDay * daysAfterDeadline();
+    public double getPrice() {
+        return this.priceForDay * daysAfterDeadline();
     }
 
     public Borrow getBorrow() {
@@ -42,6 +42,6 @@ public class Bill implements Serializable {
     }
     @Override
     public String toString(){
-        return billID + " " + getPrize() + " " + getReturnDeadline() + " " + getBorrow() + " " + billID_counter;
+        return billID + " " + getPrice() + " " + getReturnDeadline() + " " + getBorrow() + " " + billID_counter;
     }
 }
