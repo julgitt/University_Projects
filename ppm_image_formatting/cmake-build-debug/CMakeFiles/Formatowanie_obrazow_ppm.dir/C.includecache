@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/julka/Desktop/Studia/git/wstep_do_c/Formatowanie_obrazow_ppm/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+math.h
+-
+

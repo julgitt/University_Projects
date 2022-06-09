@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Formatowanie_obrazow_ppm.dir/objects.a
+C:\PROGRA~1\CODEBL~1\MinGW\bin\ar.exe cr CMakeFiles\Formatowanie_obrazow_ppm.dir/objects.a @CMakeFiles\Formatowanie_obrazow_ppm.dir\objects1.rsp
+C:\PROGRA~1\CODEBL~1\MinGW\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\Formatowanie_obrazow_ppm.dir/objects.a -Wl,--no-whole-archive -o Formatowanie_obrazow_ppm.exe -Wl,--out-implib,libFormatowanie_obrazow_ppm.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Formatowanie_obrazow_ppm.dir\linklibs.rsp

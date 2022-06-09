@@ -1,0 +1,3 @@
+C:/Users/julka/Desktop/Studia/git/wstep_do_c/Formatowanie_obrazow_ppm/cmake-build-debug/CMakeFiles/Formatowanie_obrazow_ppm.dir
+C:/Users/julka/Desktop/Studia/git/wstep_do_c/Formatowanie_obrazow_ppm/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/julka/Desktop/Studia/git/wstep_do_c/Formatowanie_obrazow_ppm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
