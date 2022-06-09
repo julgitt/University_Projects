@@ -1,3 +1,4 @@
+#### PPM IMAGE FORMATTER
 A simple C program that allows you to format ppm images.
 To run a program, call the program in the terminal with one of the parameters:
 
