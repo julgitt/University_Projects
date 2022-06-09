@@ -8,7 +8,7 @@ ________
 - PPM Image Formatter
 
 #### Realized on the subject of "Computer Systems Architecture":
-- ask_assembly folder
+- ask_assembly directory
 
 #### Completed on the subject of "object-oriented programming":
 - Library Management System
