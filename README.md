@@ -9,7 +9,7 @@ ________
 #### Realized on the subject of "Computer Systems Architecture":
 - ask_assembly folder
 
-#### completed on the subject of "object-oriented programming":
+#### Completed on the subject of "object-oriented programming":
 - Library Management System
 
 ####  Realized on the subject of "programming methods" with the use of the functional language Racket:
