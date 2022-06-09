@@ -3,9 +3,9 @@
         .globl  bitrev
         .type bitrev, @function
 
-/*
- * W moim rozwiązaniu używam następującej techniki: Odwracam bajty, a następnie zamieniam miejscami "czwórki", pary i sąsiadujące bity.
- */
+
+  W moim rozwiązaniu używam następującej techniki: Odwracam bajty, a następnie zamieniam miejscami "czwórki", pary i sąsiadujące bity.
+ 
 
 	bitrev:
 
