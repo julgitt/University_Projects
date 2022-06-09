@@ -1,6 +1,6 @@
-  .text
-        .globl  addsb
-        .type   addsb, @function
+	  .text
+		.globl  addsb
+		.type   addsb, @function
 
 /*
  * W moim rozwiązaniu używam następującej techniki: dodaje osobno parzyste i nieparzyste bajty oraz wykorzystuje dwie maski- jedna sprawdza czy doszlo do przepelnienia w bajcie, a druga ustawia bajt na int-min/int-max w zaleznosci od bitu znaku
