@@ -7,8 +7,15 @@ import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class Manager implements Serializable {
+    private final IDSequence booksID;
+    private final IDSequence authorsID;
+    private final IDSequence borrowsID;
+    private final IDSequence usersID;
+    private final IDSequence billsID;
+
     private final List<Book> books;
     private final List<Author> authors;
     private final List<Borrow> borrows;
@@ -17,6 +24,12 @@ public class Manager implements Serializable {
 
     //constructors
     public Manager() {
+        booksID = new IDSequence();
+        authorsID = new IDSequence();
+        borrowsID = new IDSequence();
+        usersID = new IDSequence();
+        billsID = new IDSequence();
+
         books = new ArrayList<Book>();
         authors = new ArrayList<Author>();
         borrows = new ArrayList<Borrow>();
@@ -24,7 +37,13 @@ public class Manager implements Serializable {
         bills = new ArrayList<Bill>();
     }
 
-    public Manager(List<Book> books, List<Author> authors, List<Borrow> borrows, List<User> users, List<Bill> bills) {
+    public Manager(List<Book> books, List<Author> authors, List<Borrow> borrows, List<User> users, List<Bill> bills, AtomicLong bookID, AtomicLong authorID,AtomicLong borrowID,AtomicLong userID,AtomicLong billID) {
+        booksID = new IDSequence(bookID);
+        authorsID = new IDSequence(authorID);
+        borrowsID = new IDSequence(borrowID);
+        usersID = new IDSequence(userID);
+        billsID = new IDSequence(billID);
+
         this.books = books;
         this.authors = authors;
         this.borrows = borrows;
@@ -58,22 +77,22 @@ public class Manager implements Serializable {
 
         for (Author author : authors) {
             if (Objects.equals(author.getName(), name) && Objects.equals(author.getSecondName(), secondName)) {
-                Book newBook = new Book(author, title, price);
+                Book newBook = new Book(author, title, price, booksID.getNextValue());
                 author.addBook(newBook);
                 books.add(newBook);
                 return;
             }
         }
 
-        Author newAuthor = new Author(name, secondName);
-        Book newBook = new Book(newAuthor, title, price);
+        Author newAuthor = new Author(name, secondName, authorsID.getNextValue());
+        Book newBook = new Book(newAuthor, title, price, booksID.getNextValue());
         newAuthor.addBook(newBook);
 
         authors.add(newAuthor);
         books.add(newBook);
     }
 
-    public void deleteBook(int id) {
+    public void deleteBook(long id) {
         Book deletedBook = null;
         for (Book book : books) {
             if (id == book.getBookID()) {
@@ -94,7 +113,7 @@ public class Manager implements Serializable {
         }
     }
 
-    public void updateBook(int id) {
+    public void updateBook(long id) {
         for (Book book : books) {
             if (id == book.getBookID()) {
                 book.changeStatus();
@@ -106,12 +125,12 @@ public class Manager implements Serializable {
     //__________________________________USERS___________________________________________________
 
     public void addUser(String name, String secondName, int phoneNumber) {
-        User newUser = new User(name, secondName, phoneNumber);
+        User newUser = new User(name, secondName, phoneNumber, usersID.getNextValue());
         users.add(newUser);
 
     }
 
-    public void deleteUser(int id) {
+    public void deleteUser(long id) {
         User deletedUser = null;
         for (User user : users) {
             if (id == user.getUserID()) {
@@ -146,12 +165,12 @@ public class Manager implements Serializable {
         if (bookBorrow == null || userBorrow == null)
             throw new RuntimeException("There is no user or book with such index");
 
-        Borrow newBorrow = new Borrow(userBorrow, userID, bookBorrow, bookID, dateOfBorrow, days);
+        Borrow newBorrow = new Borrow(userBorrow, userID, bookBorrow, bookID, dateOfBorrow, days, borrowsID.getNextValue());
         borrows.add(newBorrow);
         bookBorrow.setStatus("borrowed");
     }
 
-    public void deleteBorrow(int id) {
+    public void deleteBorrow(long id) {
         for (Borrow borrow : borrows) {
             if (id == borrow.getBorrowID()) {
                 borrow.getBook().setStatus("not borrowed");
@@ -164,14 +183,14 @@ public class Manager implements Serializable {
     public void DeadlineChecker() {
         for (Borrow borrow : borrows) {
             if ( borrow.getReturnDeadline().isBefore(ChronoLocalDate.from(LocalDateTime.now())) && !borrow.getStatus()) {
-                bills.add(new Bill(borrow, borrow.getReturnDeadline(), borrow.getBook().getPrice()));
+                bills.add(new Bill(borrow, borrow.getReturnDeadline(), borrow.getBook().getPrice(), billsID.getNextValue()));
                 borrow.changeStatus();
             }
         }
     }
 
     //_______________________________________BILLS_____________________________________________________
-    public void deleteBill(int id) {
+    public void deleteBill(long id) {
         for (Bill bill : bills) {
             if (id == bill.getBillID()) {
                 bills.remove(bill);
@@ -183,8 +202,8 @@ public class Manager implements Serializable {
     //_____________________________________SHOW DATA____________________________________________________
     @Override
     public String toString(){
-        return toStringBooks() + " " + toStringAuthors()
-        + " " + toStringUsers() + " " + toStringBorrows() + " " + toStringBills();
+        return toStringBooks() + " " + booksID + " " + toStringAuthors() + " " + authorsID + " " + toStringUsers()
+                +  " " + usersID + " " + toStringBorrows() + " " + borrowsID + " "+ toStringBills() + billsID + " ";
     }
 
     public String toStringBooks() {

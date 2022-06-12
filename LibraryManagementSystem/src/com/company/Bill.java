@@ -4,23 +4,21 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Bill implements Serializable {
-    private final int billID;
-    static int billID_counter;
+    private final long billID;
     private final double priceForDay;
     private final LocalDate returnDeadline;
     private final Borrow borrow;
 
     //constructor
-    public Bill(Borrow borrow, LocalDate returnDeadline, double price) {
-        this.billID = billID_counter;
-        billID_counter++;
+    public Bill(Borrow borrow, LocalDate returnDeadline, double price, long id) {
+        this.billID = id;
         this.borrow = borrow;
         this.returnDeadline = returnDeadline;
         this.priceForDay = price * 0.1;
     }
 
     //getters
-    public int getBillID() {
+    public long getBillID() {
         return this.billID;
     }
 
@@ -42,6 +40,6 @@ public class Bill implements Serializable {
     }
     @Override
     public String toString(){
-        return billID + " " + getPrice() + " " + getReturnDeadline() + " " + getBorrow() + " " + billID_counter;
+        return billID + " " + getPrice() + " " + getReturnDeadline() + " " + getBorrow();
     }
 }

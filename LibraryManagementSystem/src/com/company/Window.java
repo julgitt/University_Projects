@@ -175,10 +175,15 @@ public class Window {
                         || Objects.equals(authorNameTextField.getText(), "") || Objects.equals(authorSecondNameTextField.getText(), ""))
                     errors.setText("You shouldn't left blank labels");
                 else {
-                    errors.setText("");
-                    manager.addBook(titleTextField.getText(), Double.parseDouble(priceTextField.getText()), authorNameTextField.getText(), authorSecondNameTextField.getText());
-                    CreateBooksTable();
-                    CreateAuthorsTable();
+                    try {
+                        errors.setText("");
+                        manager.addBook(titleTextField.getText(), Double.parseDouble(priceTextField.getText()), authorNameTextField.getText(), authorSecondNameTextField.getText());
+                        CreateBooksTable();
+                        CreateAuthorsTable();
+                    }catch (Exception exception)
+                    {
+                        errors.setText("Something went wrong. Check if the price is in the proper format (for example 20.50)");
+                    }
                 }
             }
         });
@@ -193,7 +198,11 @@ public class Window {
                         errors.setText("You must select a row to delete");
                 } else {
                     errors.setText("");
-                    int id = (int) table.getValueAt(books.getSelectedRow(), 0); //to take book ID
+                    long id = (long) table.getValueAt(books.getSelectedRow(), 0); //to take book ID
+                    if (existsInTable(borrows, String.valueOf(id),0)){
+                        errors.setText("First, delete the borrow associated with this book");
+                        return;
+                    }
                     manager.deleteBook(id);
                     CreateBooksTable();
                     CreateAuthorsTable();
@@ -211,10 +220,13 @@ public class Window {
                         || Objects.equals(phoneTextField.getText(), ""))
                     errors.setText("You shouldn't left blank labels");
                 else {
-                    errors.setText("");
-                    manager.addUser(nameTextField.getText(), secondNameTextField.getText(), Integer.parseInt(phoneTextField.getText()));
-                    CreateUsersTable();
-                    //System.out.println(manager.toString());
+                    try {
+                        errors.setText("");
+                        manager.addUser(nameTextField.getText(), secondNameTextField.getText(), Integer.parseInt(phoneTextField.getText()));
+                        CreateUsersTable();
+                    } catch (Exception exception) {
+                        errors.setText("Something went wrong. Check if the phone number is in the proper format");
+                    }
                 }
             }
         });
@@ -230,10 +242,14 @@ public class Window {
                         errors.setText("You must select a row to delete");
                 } else {
                     errors.setText("");
-                    int id = (int) table.getValueAt(users.getSelectedRow(), 0); //to take book ID
+                    long id = (long) table.getValueAt(users.getSelectedRow(), 0); //to take user ID
+
+                    if (existsInTable(borrows, String.valueOf(id),1)){
+                        errors.setText("First, delete the borrow associated with this user");
+                        return;
+                    }
                     manager.deleteUser(id);
                     CreateUsersTable();
-                    //CreateBorrowsTable();
                 }
             }
         });
@@ -248,14 +264,18 @@ public class Window {
                     errors.setText("You shouldn't left blank labels");
                 else {
                     try {
-                        LocalDate date = LocalDate.parse(dateOfBorrowTextField.getText());
                         errors.setText("");
+                        if (LocalDate.parse(dateOfBorrowTextField.getText()).isAfter(ChronoLocalDate.from(LocalDateTime.now()))){
+                            errors.setText("You cannot set a date that is later than today");
+                            return;
+                        }
                         manager.addBorrow(Integer.parseInt(userIDTextField.getText()), Integer.parseInt(bookIDTextField.getText()), LocalDate.parse(dateOfBorrowTextField.getText()), 30);
+
                         CreateBorrowsTable();
                         CreateBillsTable();
                         CreateBooksTable();
                     } catch (Exception exc){
-                        errors.setText("Date must be in yyyy-mm-dd format");
+                        errors.setText("Something went wrong. Check if the date is in 'yyyy-mm-dd' format");
                     }
 
                 }
@@ -264,15 +284,15 @@ public class Window {
         borrowDeleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DefaultTableModel table = (DefaultTableModel) books.getModel();
-                if (books.getSelectedRow() == -1) {
-                    if (books.getRowCount() == 0)
+                DefaultTableModel table = (DefaultTableModel) borrows.getModel();
+                if (borrows.getSelectedRow() == -1) {
+                    if (borrows.getRowCount() == 0)
                         errors.setText("Table is Empty");
                     else
                         errors.setText("You must select a row to delete");
                 } else {
                     errors.setText("");
-                    int id = (int) table.getValueAt(borrows.getSelectedRow(), 0);
+                    long id = (long) table.getValueAt(borrows.getSelectedRow(), 0);
                     manager.deleteBorrow(id);
                     CreateBorrowsTable();
                     CreateBillsTable();
@@ -295,8 +315,11 @@ public class Window {
                         errors.setText("You must select a row to delete");
                 } else {
                     errors.setText("");
-                    int id = (int) table.getValueAt(bills.getSelectedRow(), 0);
+                    long id = (long) table.getValueAt(bills.getSelectedRow(), 0);
                     manager.deleteBill(id);
+                    CreateBorrowsTable();
+                    CreateBillsTable();
+                    CreateBooksTable();
                 }
             }
         });
@@ -433,6 +456,19 @@ public class Window {
         columns.getColumn(1).setCellRenderer(centerRenderer);
         columns.getColumn(2).setCellRenderer(centerRenderer);
         columns.getColumn(3).setCellRenderer(centerRenderer);
+    }
+
+    public boolean existsInTable(JTable table, String entry, int column) {
+        // Get row and column count
+        int rowCount = table.getRowCount();
+
+        // Check against all entries
+        for (int i = 0; i < rowCount; i++) {
+            if (table.getValueAt(i,column) == entry) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

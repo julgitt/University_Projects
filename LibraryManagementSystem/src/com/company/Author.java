@@ -5,24 +5,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Author implements Serializable {
-    private final int authorID;
-    static int authorID_counter = 0;
+    private final long authorID;
     private final String name;
     private final String secondName;
     private final List<Book> booksInLibrary;
 
 
     //constructor
-    public Author(String name, String secondName) {
-        this.authorID = authorID_counter;
-        authorID_counter++;
+    public Author(String name, String secondName, long id) {
+        this.authorID = id;
         this.name = name;
         this.secondName = secondName;
         this.booksInLibrary = new ArrayList<>();
     }
 
     //getters
-    public int getAuthorID() {
+    public long getAuthorID() {
         return this.authorID;
     }
 
@@ -50,7 +48,7 @@ public class Author implements Serializable {
 
     @Override
     public String toString() {
-        return getName() + " " + " " + getSecondName() + " " + getAuthorID() + " " + authorID_counter;
+        return getName() + " " + " " + getSecondName() + " " + getAuthorID();
     }
 }
 

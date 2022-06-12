@@ -4,8 +4,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class Book implements Serializable {
-    private final int bookID;
-    static int bookID_counter = 0;
+    private final long bookID;
     private final Author author;
     private final String title;
     private Boolean status; //is Borrowed?
@@ -13,9 +12,8 @@ public class Book implements Serializable {
 
 
     //constructor
-    public Book(Author author, String title, double price) {
-        this.bookID = bookID_counter;
-        bookID_counter++;
+    public Book(Author author, String title, double price, long id) {
+        this.bookID = id;
         this.author = author;
         this.title = title;
         this.price = price;
@@ -23,7 +21,7 @@ public class Book implements Serializable {
     }
 
     //getters
-    public int getBookID() {
+    public long getBookID() {
         return this.bookID;
     }
 
@@ -57,7 +55,7 @@ public class Book implements Serializable {
 
     @Override
     public String toString() {
-        return getTitle() + " " + getBookID() + " " + getAuthor() + " " + getPrice() + " " + getStatus() + " " + bookID_counter;
+        return getTitle() + " " + getBookID() + " " + getAuthor() + " " + getPrice() + " " + getStatus();
     }
 
 }

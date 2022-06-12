@@ -32,16 +32,6 @@
               <text value="authors"/>
             </properties>
           </component>
-          <component id="d6451" class="javax.swing.JButton" binding="usersButton" default-binding="true">
-            <constraints>
-              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-11381417"/>
-              <foreground color="-131587"/>
-              <text value="users"/>
-            </properties>
-          </component>
           <component id="e9742" class="javax.swing.JButton" binding="booksButton">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -54,7 +44,7 @@
           </component>
           <component id="f3ef1" class="javax.swing.JButton" binding="borrowsButton">
             <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-11381417"/>
@@ -64,12 +54,22 @@
           </component>
           <component id="1d61e" class="javax.swing.JButton" binding="billsButton">
             <constraints>
-              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-11381417"/>
               <foreground color="-131587"/>
               <text value="bills"/>
+            </properties>
+          </component>
+          <component id="d6451" class="javax.swing.JButton" binding="usersButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-11381417"/>
+              <foreground color="-131587"/>
+              <text value="users"/>
             </properties>
           </component>
         </children>

@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5adb80c8-7ac6-42bf-bbe3-853d19d13456" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/IDSequence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save.ser" beforeDir="false" afterPath="$PROJECT_DIR$/save.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Bill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Bill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Borrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Borrow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Bill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Borrow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Window.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Window.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Window.java" afterDir="false" />
     </list>
@@ -136,6 +147,17 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -143,11 +165,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/Window.java</url>
-          <line>242</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

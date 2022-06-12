@@ -4,8 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Borrow implements Serializable {
-    private final int borrowID;
-    static int borrowID_counter;
+    private final long borrowID;
     private final User user;
     private final int userID;
     private final Book book;
@@ -15,9 +14,8 @@ public class Borrow implements Serializable {
     private final LocalDate returnDeadline;
 
     //constructor
-    public Borrow(User user, int userID, Book book, int bookID, LocalDate dateOfBorrow, int days) {
-        this.borrowID = borrowID_counter;
-        borrowID_counter++;
+    public Borrow(User user, int userID, Book book, int bookID, LocalDate dateOfBorrow, int days, long id) {
+        this.borrowID = id;
         this.user = user;
         this.book = book;
         this.userID = userID;
@@ -28,7 +26,7 @@ public class Borrow implements Serializable {
     }
 
     //getters
-    public int getBorrowID() {
+    public long getBorrowID() {
         return this.borrowID;
     }
 
@@ -67,7 +65,7 @@ public class Borrow implements Serializable {
 
     @Override
     public String toString() {
-        return getBorrowID() + " " + getUser() + " " + getUserID() + " " + getBook() + " " + getBookID() + " " + getStatus() + " " + getDateOfBorrow() + " " + getReturnDeadline() + " " + borrowID_counter;
+        return getBorrowID() + " " + getUser() + " " + getUserID() + " " + getBook() + " " + getBookID() + " " + getStatus() + " " + getDateOfBorrow() + " " + getReturnDeadline();
     }
 
 }
