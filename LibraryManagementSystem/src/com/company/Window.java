@@ -74,6 +74,7 @@ public class Window {
     private JScrollPane scrollBills;
     private JTable bills;
     private JButton billDeleteButton;
+    private JTextField numberTextField;
     private final Manager manager;
 
     private final DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -172,17 +173,20 @@ public class Window {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (Objects.equals(titleTextField.getText(), "") || Objects.equals(priceTextField.getText(), "")
-                        || Objects.equals(authorNameTextField.getText(), "") || Objects.equals(authorSecondNameTextField.getText(), ""))
+                        || Objects.equals(authorNameTextField.getText(), "") || Objects.equals(authorSecondNameTextField.getText(), "") || Objects.equals(numberTextField.getText(), ""))
                     errors.setText("You shouldn't left blank labels");
                 else {
                     try {
                         errors.setText("");
-                        manager.addBook(titleTextField.getText(), Double.parseDouble(priceTextField.getText()), authorNameTextField.getText(), authorSecondNameTextField.getText());
+
+                        for (long i = Long.parseLong(numberTextField.getText()); i > 0; i--) {
+                            manager.addBook(titleTextField.getText(), Double.parseDouble(priceTextField.getText()), authorNameTextField.getText(), authorSecondNameTextField.getText());
+                        }
                         CreateBooksTable();
                         CreateAuthorsTable();
                     }catch (Exception exception)
                     {
-                        errors.setText("Something went wrong. Check if the price is in the proper format (for example 20.50)");
+                        errors.setText("Something went wrong. Check if the price/number is in the proper format");
                     }
                 }
             }
@@ -267,6 +271,10 @@ public class Window {
                         errors.setText("");
                         if (LocalDate.parse(dateOfBorrowTextField.getText()).isAfter(ChronoLocalDate.from(LocalDateTime.now()))){
                             errors.setText("You cannot set a date that is later than today");
+                            return;
+                        }
+                        if (existsInTable(borrows,bookIDTextField.getText(),3)){
+                            errors.setText("This book is already borrowed");
                             return;
                         }
                         manager.addBorrow(Integer.parseInt(userIDTextField.getText()), Integer.parseInt(bookIDTextField.getText()), LocalDate.parse(dateOfBorrowTextField.getText()), 30);
@@ -391,15 +399,17 @@ public class Window {
         int size = 0;
         if (manager.getBills() != null) size = manager.getBills().size();
 
-        Object[][] data = new Object[size][5];
+        Object[][] data = new Object[size][7];
         for (int i = 0; i < size; i++) {
             data[i][0] = manager.getBills().get(i).getBillID();
             data[i][1] = manager.getBills().get(i).getBorrow().getUserID();
             data[i][2] = manager.getBills().get(i).getBorrow().getUser().getName() + " " + manager.getBills().get(i).getBorrow().getUser().getSecondName();
-            data[i][3] = manager.getBills().get(i).getBorrow().getReturnDeadline();
-            data[i][4] =  String.format("%.2f",(manager.getBills().get(i).getPrice()));
+            data[i][3] = manager.getBills().get(i).getBorrow().getBookID();
+            data[i][4] = manager.getBills().get(i).getBorrow().getBook().getTitle();
+            data[i][5] = manager.getBills().get(i).getBorrow().getReturnDeadline();
+            data[i][6] =  String.format("%.2f",(manager.getBills().get(i).getPrice()));
         }
-        bills.setModel(new DefaultTableModel(data, new String[]{"ID", "UserID", "Username", "Return Deadline", "price"}));
+        bills.setModel(new DefaultTableModel(data, new String[]{"ID", "UserID", "Username", "BookID", "Book Title", "Return Deadline", "price"}));
 
 
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
@@ -411,6 +421,8 @@ public class Window {
         columns.getColumn(2).setCellRenderer(centerRenderer);
         columns.getColumn(3).setCellRenderer(centerRenderer);
         columns.getColumn(4).setCellRenderer(centerRenderer);
+        columns.getColumn(5).setCellRenderer(centerRenderer);
+        columns.getColumn(6).setCellRenderer(centerRenderer);
     }
 
     private void CreateAuthorsTable() {
@@ -460,11 +472,12 @@ public class Window {
 
     public boolean existsInTable(JTable table, String entry, int column) {
         // Get row and column count
+
         int rowCount = table.getRowCount();
 
         // Check against all entries
         for (int i = 0; i < rowCount; i++) {
-            if (table.getValueAt(i,column) == entry) {
+            if (Objects.equals(table.getValueAt(i, column).toString(), entry)) {
                 return true;
             }
         }

@@ -7,9 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5adb80c8-7ac6-42bf-bbe3-853d19d13456" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/LibraryManagementSystem_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LibraryManagementSystem_jar/LibraryManagementSystem.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LibraryManagementSystem_jar/LibraryManagementSystem.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save.ser" beforeDir="false" afterPath="$PROJECT_DIR$/save.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Window.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Window.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +125,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "18",
     "last_opened_file_path": "/home/julia/University_Projects/LibraryManagementSystem/out/artifacts/LibraryManagementSystem_jar/LibraryManagementSystem.jar",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
