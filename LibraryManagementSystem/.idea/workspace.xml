@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="LibraryManagementSystem:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5adb80c8-7ac6-42bf-bbe3-853d19d13456" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/IDSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/LibraryManagementSystem_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Bill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Bill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Borrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Borrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Bill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Borrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Window.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Window.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,22 +104,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="2" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="285" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
-  </component>
-  <component name="RunManager">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/julia/University_Projects/LibraryManagementSystem/out/artifacts/LibraryManagementSystem_jar/LibraryManagementSystem.jar",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RunManager" selected="JAR Application.LibraryManagementSystem">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="LibraryManagementSystem" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LibraryManagementSystem" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/LibraryManagementSystem_jar/LibraryManagementSystem.jar" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="LibraryManagementSystem:jar" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JAR Application.LibraryManagementSystem" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />

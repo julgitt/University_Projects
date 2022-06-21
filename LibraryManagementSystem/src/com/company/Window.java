@@ -51,7 +51,7 @@ public class Window {
     private JScrollPane scrollUsers;
     private JScrollPane scrollAuthors;
     private JScrollPane scrollBooks;
-    private JPanel SavePanel;
+    private JPanel savePanel;
     private JButton saveButton;
     private JButton borrowsButton;
     private JButton billsButton;
@@ -339,7 +339,7 @@ public class Window {
             data[i][3] = manager.getBooks().get(i).getPrice();
             data[i][4] = (manager.getBooks().get(i).getStatus()) ? "borrowed" : "not borrowed";
         }
-        books.setModel(new DefaultTableModel(data, new String[]{"Id", "Title", "Author", "price", "Status"}));
+        books.setModel(new DefaultTableModel(data, new String[]{"Id", "Title", "Author", "Price", "Status"}));
 
 
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
