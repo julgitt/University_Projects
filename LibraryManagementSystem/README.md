@@ -8,4 +8,4 @@ A window application that allows you to manage the library database. It will inc
 The program is implemented in Java in the IntelliJ environment with the use of the Swing library.
 
 
-![image](https://user-images.githubusercontent.com/95649808/172910460-d5cea343-1bc4-439d-b29e-a8d681cf0f00.png)
+![image](https://user-images.githubusercontent.com/95649808/174899438-a07f49fb-bb4e-4351-a829-209c77ad8c65.png)
