@@ -58,10 +58,10 @@ public class Borrow implements Serializable {
         return this.returnDeadline;
     }
 
+    //setter
     public void changeStatus() {
         status = !status;
     }
-
 
     @Override
     public String toString() {

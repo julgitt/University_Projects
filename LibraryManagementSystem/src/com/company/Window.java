@@ -13,6 +13,7 @@ import java.io.ObjectOutputStream;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.chrono.ChronoLocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.Objects;
 
 public class Window {
@@ -184,9 +185,13 @@ public class Window {
                         }
                         CreateBooksTable();
                         CreateAuthorsTable();
-                    }catch (Exception exception)
+                    }catch (NumberFormatException exc)
                     {
-                        errors.setText("Something went wrong. Check if the price/number is in the proper format");
+                        errors.setText("The price or number is not in the proper format");
+                    }
+                    catch (Exception exc)
+                    {
+                        errors.setText(exc.toString());
                     }
                 }
             }
@@ -228,8 +233,11 @@ public class Window {
                         errors.setText("");
                         manager.addUser(nameTextField.getText(), secondNameTextField.getText(), Integer.parseInt(phoneTextField.getText()));
                         CreateUsersTable();
-                    } catch (Exception exception) {
-                        errors.setText("Something went wrong. Check if the phone number is in the proper format");
+                    }
+                    catch (NumberFormatException exc) {
+                        errors.setText("The phone number is not in the proper format");
+                    }catch (Exception exc) {
+                        errors.setText(exc.toString());
                     }
                 }
             }
@@ -282,8 +290,14 @@ public class Window {
                         CreateBorrowsTable();
                         CreateBillsTable();
                         CreateBooksTable();
-                    } catch (Exception exc){
-                        errors.setText("Something went wrong. Check if the date is in 'yyyy-mm-dd' format");
+                    } catch (DateTimeParseException exc){
+                        errors.setText("Date must be in 'yyyy-mm-dd' format");
+                    }
+                    catch (RuntimeException exc){
+                        errors.setText("There is no user or book with such index");
+                    }
+                    catch (Exception exc){
+                        errors.setText(exc.toString());
                     }
 
                 }
@@ -323,6 +337,10 @@ public class Window {
                         errors.setText("You must select a row to delete");
                 } else {
                     errors.setText("");
+                    if (existsInTable(borrows, String.valueOf(table.getValueAt(bills.getSelectedRow(),3)),3)) {
+                        errors.setText("Delete the borrow first, and then remove the bill");
+                        return;
+                    }
                     long id = (long) table.getValueAt(bills.getSelectedRow(), 0);
                     manager.deleteBill(id);
                     CreateBorrowsTable();
@@ -347,7 +365,7 @@ public class Window {
             data[i][3] = manager.getBooks().get(i).getPrice();
             data[i][4] = (manager.getBooks().get(i).getStatus()) ? "borrowed" : "not borrowed";
         }
-        books.setModel(new DefaultTableModel(data, new String[]{"Id", "Title", "Author", "Price", "Status"}));
+        books.setModel(new DefaultTableModel(data, new String[]{"ID", "Title", "Author", "Price", "Status"}));
 
 
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
@@ -409,7 +427,7 @@ public class Window {
             data[i][5] = manager.getBills().get(i).getBorrow().getReturnDeadline();
             data[i][6] =  String.format("%.2f",(manager.getBills().get(i).getPrice()));
         }
-        bills.setModel(new DefaultTableModel(data, new String[]{"ID", "UserID", "Username", "BookID", "Book Title", "Return Deadline", "price"}));
+        bills.setModel(new DefaultTableModel(data, new String[]{"ID", "UserID", "Username", "BookID", "Book Title", "Return Deadline", "Price"}));
 
 
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
@@ -472,7 +490,6 @@ public class Window {
 
     public boolean existsInTable(JTable table, String entry, int column) {
         // Get row and column count
-
         int rowCount = table.getRowCount();
 
         // Check against all entries

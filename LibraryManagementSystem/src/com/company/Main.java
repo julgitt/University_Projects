@@ -9,10 +9,9 @@ import java.io.ObjectInputStream;
 public class Main {
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
+        SwingUtilities.invokeLater(new Runnable() { //it puts runnable event on a queue
             @Override
             public void run() {
-
                 Manager manager = new Manager();
                 File file = new File("save.ser");
                 if (file.isFile() && file.canRead()) {

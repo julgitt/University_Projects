@@ -9,6 +9,12 @@
     <list default="true" id="5adb80c8-7ac6-42bf-bbe3-853d19d13456" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/LibraryManagementSystem_jar/LibraryManagementSystem.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/LibraryManagementSystem_jar/LibraryManagementSystem.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Borrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Borrow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/IDSequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/IDSequence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Manager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$11.class" afterDir="false" />
@@ -24,6 +30,11 @@
       <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibraryManagementSystem/com/company/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/save.ser" beforeDir="false" afterPath="$PROJECT_DIR$/save.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Borrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/IDSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/IDSequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Window.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Window.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Window.java" afterDir="false" />
     </list>
@@ -120,18 +131,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "18",
-    "last_opened_file_path": "/home/julia/University_Projects/LibraryManagementSystem/out/artifacts/LibraryManagementSystem_jar/LibraryManagementSystem.jar",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;18&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;465&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/julia/University_Projects/LibraryManagementSystem/out/artifacts/LibraryManagementSystem_jar/LibraryManagementSystem.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JAR Application.LibraryManagementSystem">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />

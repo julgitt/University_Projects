@@ -75,7 +75,7 @@ public class Manager implements Serializable {
     //______________________________________________BOOKS___________________________________________________
     public void addBook(String title, double price, String name, String secondName) {
 
-        for (Author author : authors) {
+        for (Author author : authors) { //if there is already an author in the database
             if (Objects.equals(author.getName(), name) && Objects.equals(author.getSecondName(), secondName)) {
                 Book newBook = new Book(author, title, price, booksID.getNextValue());
                 author.addBook(newBook);
@@ -83,7 +83,7 @@ public class Manager implements Serializable {
                 return;
             }
         }
-
+        //otherwise we create a new one
         Author newAuthor = new Author(name, secondName, authorsID.getNextValue());
         Book newBook = new Book(newAuthor, title, price, booksID.getNextValue());
         newAuthor.addBook(newBook);
@@ -94,7 +94,7 @@ public class Manager implements Serializable {
 
     public void deleteBook(long id) {
         Book deletedBook = null;
-        for (Book book : books) {
+        for (Book book : books) { //delete book with the given id
             if (id == book.getBookID()) {
                 deletedBook = book;
                 books.remove(book);
@@ -105,29 +105,16 @@ public class Manager implements Serializable {
         assert deletedBook != null;
         deletedBook.getAuthor().deleteBook(deletedBook);
         if (deletedBook.getAuthor().HowManyBooks() == 0) { // if author has no more books in the library
-            authors.remove(deletedBook.getAuthor());       // delete author from system
+            authors.remove(deletedBook.getAuthor());       // delete author from the database
         }
 
-        for (int i = 0; i < borrows.size(); i++) { //delete borrows related to this book
-            if (borrows.get(i).getBook() == deletedBook) borrows.remove(borrows.get(i));
-        }
     }
 
-    public void updateBook(long id) {
-        for (Book book : books) {
-            if (id == book.getBookID()) {
-                book.changeStatus();
-                break;
-            }
-        }
-    }
-    
     //__________________________________USERS___________________________________________________
 
     public void addUser(String name, String secondName, int phoneNumber) {
         User newUser = new User(name, secondName, phoneNumber, usersID.getNextValue());
         users.add(newUser);
-
     }
 
     public void deleteUser(long id) {
@@ -137,11 +124,6 @@ public class Manager implements Serializable {
                 deletedUser = user;
                 users.remove(user);
                 break;
-            }
-        }
-        for (int i = 0; i < borrows.size(); i++) {
-            if (borrows.get(i).getUser() == deletedUser) {
-                borrows.remove(borrows.get(i));
             }
         }
     }

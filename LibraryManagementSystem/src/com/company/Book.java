@@ -8,7 +8,7 @@ public class Book implements Serializable {
     private final Author author;
     private final String title;
     private Boolean status; //is Borrowed?
-    private final double price;
+    private final double price; //lepiej w intach
 
 
     //constructor
@@ -39,11 +39,6 @@ public class Book implements Serializable {
 
     public double getPrice() {
         return this.price;
-    }
-
-    //setters
-    public void changeStatus() {
-        this.status = !status;
     }
 
     public void setStatus(String status) {
