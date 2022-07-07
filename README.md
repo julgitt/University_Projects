@@ -1,6 +1,6 @@
 
 ### University_Projects
-I will post here some smaller or larger projects realized at the university.
+Here I will post some smaller or larger projects realized at the university.
 ________
 
 #### Completed on the subject "introduction to programming in the C language":
