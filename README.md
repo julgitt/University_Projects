@@ -1,7 +1,9 @@
 
 # University Projects
 ### Here I will post some smaller or larger projects realized at the university.
+<br>
 
+## FIRST YEAR
 
 #### Completed on the subject "introduction to programming in the C language":
 - Arkanoid
@@ -17,5 +19,10 @@
 - Relational Databases
 - Logic circuit simulator
 
+<br>
+
+## SECOND YEAR
+
 #### Operation Systems:
 - [Memory Allocator](https://github.com/julgitt/Memory-Allocator)
+
