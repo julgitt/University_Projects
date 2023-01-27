@@ -18,4 +18,4 @@
 - Logic circuit simulator
 
 #### Operation Systems:
-- [Memory Allocator](https://github.com/julgitt/Memory-Allocator/readme.md)
+- [Memory Allocator](https://github.com/julgitt/Memory-Allocator)
