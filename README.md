@@ -1,7 +1,7 @@
 
-### University_Projects
-Here I will post some smaller or larger projects realized at the university.
-________
+# University Projects
+### Here I will post some smaller or larger projects realized at the university.
+
 
 #### Completed on the subject "introduction to programming in the C language":
 - Arkanoid
