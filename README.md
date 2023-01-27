@@ -7,19 +7,19 @@
 
 ### I TERM
 #### Introduction to Programming in the C language:
-- Arkanoid
-- PPM Image Formatter
+- [Arkanoid](https://github.com/julgitt/University_Projects/tree/master/Arkanoid)
+- [PPM Image Formatter](https://github.com/julgitt/University_Projects/tree/master/ppm_image_formatting)
 
 ### II TERM
 #### Computer Systems Architecture (projects in assembly):
-- ask_assembly directory
+- [Assembly Projects](https://github.com/julgitt/University_Projects/tree/master/ask_assembly)
 
 #### Object-oriented programming (project in Java):
-- Library Management System
+- [Library Management System](https://github.com/julgitt/University_Projects/tree/master/LibraryManagementSystem)
 
 ####  Programming Methods with (projects in the functional language- Racket):
-- Relational Databases
-- Logic circuit simulator
+- [Relational Databases](https://github.com/julgitt/University_Projects/tree/master/Relational_Databases)
+- [Logic circuit simulator](https://github.com/julgitt/University_Projects/tree/master/Logic_circuit_simulator)
 
 <br>
 
@@ -30,3 +30,5 @@
 - [Memory Allocator](https://github.com/julgitt/Memory-Allocator)
 - [Shell](https://github.com/julgitt/Shell)
 
+#### Selected Elements of Software Design Practice (using Node.js, Express, EJS, MongoDB)
+- Online Store Page (in progress)
