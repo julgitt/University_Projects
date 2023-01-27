@@ -28,4 +28,5 @@
 ### III TERM
 #### Operation Systems (projects in C):
 - [Memory Allocator](https://github.com/julgitt/Memory-Allocator)
+- [SHELL](https://github.com/julgitt/Shell)
 
