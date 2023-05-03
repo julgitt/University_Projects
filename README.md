@@ -31,4 +31,4 @@
 - [Shell](https://github.com/julgitt/Shell)
 
 #### Selected Elements of Software Design Practice (using Node.js, Express, EJS, MongoDB)
-- Online Store Page (in progress)
+- [Online Store Page](https://github.com/julgitt/Online-Store)
