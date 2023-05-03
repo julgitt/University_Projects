@@ -17,7 +17,7 @@
 #### Object-oriented programming (project in Java):
 - [Library Management System](https://github.com/julgitt/University_Projects/tree/master/LibraryManagementSystem)
 
-####  Programming Methods with (projects in the functional language- Racket):
+####  Programming Methods (projects in the functional language- Racket):
 - [Relational Databases](https://github.com/julgitt/University_Projects/tree/master/Relational_Databases)
 - [Logic circuit simulator](https://github.com/julgitt/University_Projects/tree/master/Logic_circuit_simulator)
 
@@ -26,7 +26,7 @@
 ## SECOND YEAR
 
 ### III TERM
-#### Operation Systems (projects in C):
+#### Operating Systems (projects in C):
 - [Memory Allocator](https://github.com/julgitt/Memory-Allocator)
 - [Shell](https://github.com/julgitt/Shell)
 
