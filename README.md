@@ -1,6 +1,6 @@
 
 # University Projects
-### Here I will post some smaller or larger projects realized at the university.
+### This repository is dedicated to showcasing some of the projects completed during my time at the university.
 <br>
 
 ## FIRST YEAR
