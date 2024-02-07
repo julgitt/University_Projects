@@ -32,3 +32,15 @@
 
 #### Selected Elements of Software Design Practice (using Node.js, Express, EJS, MongoDB)
 - [Online Store Page](https://github.com/julgitt/Online-Store)
+
+#### Numerical Analysis
+- [INSF3](https://github.com/julgitt/INSF3-creator)
+
+## THIRD YEAR
+### V TERM
+#### Functional Programming (project in Ocaml):
+- [Prolog](https://github.com/julgitt/Prolog-Implementation-In-Ocaml)
+
+#### Python
+- [Cellular Automaton](https://github.com/julgitt/Cellular-Automaton)
+
