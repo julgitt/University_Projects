@@ -33,7 +33,7 @@
 #### Selected Elements of Software Design Practice (using Node.js, Express, EJS, MongoDB)
 - [Online Store Page](https://github.com/julgitt/Online-Store)
 
-#### Numerical Analysis
+#### Numerical Analysis (project in python)
 - [INSF3](https://github.com/julgitt/INSF3-creator)
 
 ## THIRD YEAR
